@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Satellite Correlation Comparison</title>
+</head>
+<body>
+    <h1>Satellite Correlation Comparison</h1>
+    <form method="POST">
+        <label for="calendar">Select a date:</label>
+        <input type="date" id="calendar" name="calendar" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if success %}
+        <p>Graph generated successfully for {{ selected_date }}.</p>
+    {% elif error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+</body>
+</html>
