@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<style>
+	h1 {text-align: center;}
+		<meta charset="utf-8">		
+		<title>Satellite Correlation Comparison</title>
+
+	</style>
+	</head>
+	<body>
+		<h1>Satellite Correlation Comparison</h1>
+		<label for="dropdown">What kind of data would you like to compare?</label> 
+			<select id="dropdown" name="options" onchange="showOutput()"> 
+				<option value="option1">Choose:</option> 
+				<option value="LandSurface">Land Surface Temperature</option> 
+				<option value="SoilMoisture">Soil Moisture</option> 
+			</select>
+			
+			<br><br>
+			
+			<textarea id="output1" name="output1" rows="4" cols="50" readonly></textarea> 
+			
+			<br><br> 
+			
+			<textarea id="output2" name="output2" rows="4" cols="50" readonly></textarea>
+			
+			<dropdown "showOutput"</dropdown>
+			
+			<br><br>
+			
+			<label for="calendar">Select a date:</label> <input type="date" id="calendar" name="calendar"> <button onclick="getDateString()">Get Date</button>
+			
+			<calendar "getDataString"</calendar>
+    
+    
+	
+		<script>
+      //Turn on strict mode 
+			"use strict";
+			function showOutput() {
+				var dropdown = document.getElementById("dropdown"); var selectedValue = dropdown.value; 
+				
+				if (selectedValue =="LandSurface") { 
+					output1.value = "VIIRS"; output2.value = "Landsat-8"; }  
+				else { output1.value = "NOAA SMOPS"; output2.value = "Surface SM Data"; } 
+				} 
+				
+			function getDateString() { 
+				var dateInput = document.getElementById("calendar"); 
+				var selectedDate = dateInput.value; 
+				var formattedDate = selectedDate.replace(/-/g, "");
+				alert("Selected date: " + formattedDate);
+				}
+		</script>
+			
+		
+      
+      
+		 
+		  
+		</script>
+    
+	</body>
+</html>
+
+
