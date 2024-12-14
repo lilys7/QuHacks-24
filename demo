@@ -214,13 +214,3 @@ plt.text(251,264, 'Statistics: '+'\nN: '+str((scatt_diff_2.shape[0]))+'\nR: '+st
 plt.title("Comparison of VIIRS and Landsat LST on 20240407")
 plt.savefig("combined_scatter_density_20240407.png")
 plt.show()
-
-# VIIRS mean: 274.74486583610064
-# Landsat mean: 263.69915034334133
-# Mean difference: 1.1834358407198486
-# Standard deviation difference: 1.5932533452498523
-
-# VIIRS mean: 267.3677821906577
-# Landsat mean: 263.6771358720948
-# Mean difference: 1.1872727570654529
-# Standard deviation difference: 1.599945644968344
